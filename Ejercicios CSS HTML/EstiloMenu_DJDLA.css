@@ -1,0 +1,36 @@
+
+/* Estilos generales del body - DJDLA */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Fondo Oscuro - DJDLA */
+    font-family: Arial sans-serif;
+}
+
+/* Estilos para el Menú */
+.Menu {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna - DJDLA */
+    align-items: center; /* Centra los elementos - DJDLA */ 
+    padding-top: 50px;
+}
+
+
+.Menu a {
+    color: #fff; /* Color del texto - DJDLA */
+    text-decoration: none; /* Quita el subrayado */
+    margin: 15px 0; /* Espaciado vertical - DJDLA */
+    padding: 10px 20px ;
+    transition: 0.3s; /* Suaviza los efectos - DJDLA */
+    border-radius: 5px;
+}
+
+/* Efecto hover */
+.Meny a:hover {
+    background-color: #e01616; /* Color de fondo al pasar mouse - DJDLA */
+    transform: scale(1,1); /* Pequeño zoom - DJDLA */
+}
+
+
+
+
