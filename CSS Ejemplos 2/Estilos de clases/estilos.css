@@ -1,0 +1,10 @@
+body {
+    background-color:lavender;
+}
+
+.Resaltado {
+    color:aqua;
+    background-color: cornflowerblue;
+    font-style: italic;
+
+}
