@@ -1,0 +1,342 @@
+/* Configuracion General - DJDLA */
+
+/* El selector * afecta a todos los elementos de la página - DJDLA  */
+* {
+    /* Incluye padding y border dentro del tamaño del elemento - DJDLA */
+    box-sizing: border-box;
+
+    /* Elimina los márgenes predeterminados - DJDLA */
+    margin: 0;
+
+    /* Elimina los rellenos predeterminados - DJDLA */
+    padding: 0;
+}
+
+/* Configuración general del cuerpo de la página - DJDLA */
+body {
+    /* Define el tipo de letra - DJDLA */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Color de fondo de la página - DJDLA */
+    background-color: #102b4a;
+
+    /* Color predeterminado del texto - DJDLA */
+    color: white;
+}
+
+/* Menu Principal - DJDLA */
+
+.Menu-Principal {
+    /* Coloca los elementos horizontalmente - DJDLA */
+    display: flex;
+
+    /* Centra verticalmente los elementos  - DJDLA */
+    align-items: center;
+
+    /* Centra horizontalmente todo el menú - DJDLA */
+    justify-content: center;
+
+    /* Espacio entre cada elemento - DJDLA */
+    gap: 8px;
+
+    /* Espacio interior del menú - DJDLA */
+    padding: 10px 25px;
+
+    /* Color azul oscuro del menú - DJDLA */
+    background-color: #0d2948;
+
+    /* Permite que los submenus aparezcan sobre otros elementos - DJDLA */
+    position: relative;
+
+    /* Define prioridad visual  DJDLA */
+    z-index: 1000;
+}
+
+/* Cada elemento del menú - DJDLA */
+.Menu-Item {
+    /* Sirve como referencia para posicionar el submenú - DJDLA */
+    position: relative;
+}
+
+/* Enlaces principales - DJDLA */
+
+.Menu-Link {
+    /* Permite trabajar correctamente padding y dimensiones - DJDLA */
+    display: flex;
+
+    /* Alinea texto y flecha verticalmente - DJDLA */
+    align-items: center;
+
+    /* Espacio entre texto y flecha - DJDLA */
+    gap: 6px;
+
+    /* Espacio interior - DJDLA */
+    padding: 15px 14px;
+
+    /* Color gris claro - DJDLA */
+    color: #cbd5e1;
+
+    /* Elimina el subrayado de los enlaces - DJDLA */
+    text-decoration: none;
+
+    /* Coloca el texto en negrita - DJDLA */
+    font-weight: bold;
+
+    /* Tamaño del texto - DJDLA */
+    font-size: 16px;
+
+    /* Redondea las esquinas - DJDLA */
+    border-radius: 8px;
+
+    /* Hace suaves los cambios visuales - DJDLA */
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover del menú principal - DJDLA */
+/* Se ejecuta cuando colocamos el cursor sobre un enlace - DJDLA */
+.Menu-Link:Hover {
+    /* Cambia el texto a blanco - DJDLA */
+    color: white;
+
+    /* Agrega un fondo ligeramente transparente - DJDLA */
+    background-color: rgba(255, 255, 255, 0.08);
+
+    /* Mueve ligeramente el elemento hacia arriba - DJDLA */
+    transform: translateY(-2px);
+}
+
+/* Flechas - DJDLA */
+.Flecha {
+    /*  Tamaño de la flecha - DJDLA */
+    font-size: 18px;
+
+    /* Hace suave la animación - DJDLA */
+    transition: transform 0.3s ease;
+}
+
+/* Al pasar sobre el elemento gira la flecha - DJDLA */
+.Menu-Item:Hover .Flecha {
+    /* Gira la flecha 180 grados - DJDLA */
+    transform: rotate(180deg);
+}
+
+/* SubMenú Desplegable - DJDLA */
+.Submenu {
+    /* Coloca el submenú independientemente - DJDLA */
+    position: absolute;
+
+    /* Aparece debajo del elemento principal - DJDLA */
+    top: 100%;
+
+    /* Se alinea con el lado izquierdo - DJDLA */
+    left: 0;
+
+    /* Ancho minimo - DJDLA */
+    min-width: 250px;
+
+    /* Fondo blanco - DJDLA */
+    background-color: white;
+
+    /* Espacio interior - DJDLA */
+    padding: 10px;
+
+    /* Redondea las esquinas - DJDLA */
+    border-radius: 18px;
+
+    /* Agrega sombra - DJDLA */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+    /* Oculta visualmente el submenú - DJDLA */
+    /* Opacity 0 significa completamente transparente - DJDLA */
+
+    opacity: 0;
+
+    /* Visibility hiden impide interactuar con el menú mientras está oculto - DJDLA */
+    visibility: hidden;
+
+    /* Desplaza inicialmente el menú 15 pixeles hacia abajo - DJDLA */
+    transform: translateY(15px);
+
+    /* Hace suaves las animaciones - DJDLA */
+    transition: all 0.3s ease;
+}
+
+/* Mostrar el submenú - DJDLA */
+/* Cuando el mouse está sobre .Menu-Item, modificamos el .Submenu que está dentro - DJDLA */
+.Menu-Item:Hover .Submenu {
+    /* Hace visible el submenú - DJDLA */
+    opacity: 1;
+
+    /* Permite interactuar con el - DJDLA */
+    visibility: visible;
+
+    /* Regresa a su posición original - DJDLA */
+    transform: translateX(0); 
+}
+
+/* Enlaces del submenú - DJDLA */
+.Submenu a {
+    /*Cada enlace ocupa una línea completa - DJDLA */
+    display: block;
+
+    /* Espascio interno - DJDLA */
+    padding: 13px 18px;
+
+    /* Color oscuro del texto - DJDLA */
+    color: #253247;
+
+    /* Elimina subrayado - DJDLA */
+    text-decoration: none;
+
+    /* Tamaño de letra - DJDLA */
+    font-size: 16px;
+
+    /* Redondea cada opción - DJDLA */
+    border-radius: 10px;
+
+    /* Separa ligeramente las opciones - DJDLA */
+    margin: 2px 0;
+
+    /* Suaviza el efecto hover - DJDLA */
+    transition: all 0.25s ease;
+}
+
+/* Efecto en las opciones del submenú - DJDLA */
+.Submenu a:Hover {
+    /* Fondo azul muy claro - DJDLA */
+    background-color: #eaf2ff;
+
+    /* Texto azul - DJDLA */
+    color: #1455d9;
+
+    /* Mueve ligeramente el texto hacia la derecha */
+    transform: translateX(5px);
+}
+
+/* Botones generales - DJDLA */
+.Boton {
+    /* Permite controlar correctamente el padding - DJDLA */
+    display: inline-block;
+
+    /* Espacio interior - DJDLA */
+    padding: 12px 26px;
+
+    /* Texto blanco - DJDLA */
+    color: white;
+
+    /* Elimina subrayado - DJDLA */
+    text-decoration: none;
+
+    /* Texto en negrita - DJDLA */
+    font-weight: bold;
+
+    /* Bordes completamente redondeados - DJDLA */
+    border-radius: 30px;
+
+    /* Evita que el texto se divida - DJDLA */
+    white-space: nowrap;
+
+    /* Suaviza las animaciones - DJDLA */
+    transition: all 0.3s ease;
+}
+
+/* Botón Edubinder - DJDLA */
+.Edubinder {
+    /* Fondo azul - DJDLA */
+    background-color: #119bd3;
+
+    /* Sombra azul - DJDLA */
+    box-shadow: 0 5px 20px rgba(17, 155, 211, 0.50);
+}
+
+/* Botón SI-A.V - DJDLA */
+.Siav {
+    /* Fondo verde - DJDLA */
+    background-color: #14b85a;
+
+    /* Sombra verde - DJDLA */
+    box-shadow: 0 8px 25px rgba(20, 184, 90, 0.50);
+}
+
+/* Contenido de ejemplo - DJDLA */
+
+.Contenido {
+    /* Espacio interno - DJDLA */
+    padding: 100px 30px;
+
+    /* Centra el contenido - DJDLA */
+    text-align: center;
+}
+
+/* Titulo - DJDLA */
+.Contenido h1 {
+    /* Tamaño grande - DJDLA */
+    font-size: 45px;
+
+    /* Espacio debajo - DJDLA */
+    margin-bottom: 20px;
+}
+
+/* Párrafo - DJDLA */
+.Contenido p {
+    /* Tamaño del texto */
+    font-size: 18px;
+
+    /* Color gris claro - DJDLA */
+    color: #cbd5e1;
+}
+
+/* Diseño Responsive - DJDLA */
+/* Estas reglas se ejecutarán cuando la pantalla tenga 1100px o menos - DJDLA */
+@media (max-width: 1100px) {
+    .Menu-Principal {
+        /* Permite pasar elementos a otra línea - DJDLA */
+        flex-wrap: wrap;
+
+    }
+}
+
+/* Configuración para tablets y celulares - DJDLA */
+@media(max-width: 768px) {
+    .Menu-Principal {
+        /* Cambia de horizontal a vertical - DJDLA */
+        flex-direction: column;
+
+        /* Estira los elementos - DJDLA */
+        align-items: stretch;
+    }
+
+    .Menu-Link {
+        /* Distribuye texto y flecha - DJDLA */
+        justify-content: space-between;
+    }
+
+    .Submenu {
+        /* En celular deja de ser flotante - DJDLA */
+        position: static;
+        /* Oculto inicialmente - DJDLA */
+        display: none;
+
+        /* Restablecemos las propiedades utilizadas para la version de escritorio - DJDLA */
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: none;
+
+        /* Reduce el redondeado - DJDLA */
+        border-radius: 10px;
+    }
+
+    /* Al tocar/pasar sobre el elemento, aparece el submenú - DJDLA */
+    .Menu-Item:Hover .Submenu {
+        /* Muestra el submenú - DJDLA */
+        display: block;
+    }
+
+    .Boton {
+        /* Centra el texto de los botones - DJDLA */
+        text-align: center;
+    }
+}
+
