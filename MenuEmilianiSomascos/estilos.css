@@ -1,6 +1,7 @@
 /* Configuracion General - DJDLA */
 
 /* El selector * afecta a todos los elementos de la página - DJDLA  */
+
 * {
     /* Incluye padding y border dentro del tamaño del elemento - DJDLA */
     box-sizing: border-box;
@@ -22,6 +23,7 @@ body {
 
     /* Color predeterminado del texto - DJDLA */
     color: white;
+
 }
 
 /* Menu Principal - DJDLA */
@@ -50,6 +52,7 @@ body {
 
     /* Define prioridad visual  DJDLA */
     z-index: 1000;
+
 }
 
 /* Cada elemento del menú - DJDLA */
@@ -90,19 +93,22 @@ body {
 
     /* Hace suaves los cambios visuales - DJDLA */
     transition: all 0.3s ease;
+
 }
 
 /* Efecto hover del menú principal - DJDLA */
 /* Se ejecuta cuando colocamos el cursor sobre un enlace - DJDLA */
-.Menu-Link:Hover {
+.Menu-Link:hover {
     /* Cambia el texto a blanco - DJDLA */
     color: white;
+
 
     /* Agrega un fondo ligeramente transparente - DJDLA */
     background-color: rgba(255, 255, 255, 0.08);
 
     /* Mueve ligeramente el elemento hacia arriba - DJDLA */
     transform: translateY(-2px);
+
 }
 
 /* Flechas - DJDLA */
@@ -110,12 +116,14 @@ body {
     /*  Tamaño de la flecha - DJDLA */
     font-size: 18px;
 
+
     /* Hace suave la animación - DJDLA */
     transition: transform 0.3s ease;
+
 }
 
 /* Al pasar sobre el elemento gira la flecha - DJDLA */
-.Menu-Item:Hover .Flecha {
+.Menu-Item:hover .Flecha {
     /* Gira la flecha 180 grados - DJDLA */
     transform: rotate(180deg);
 }
@@ -124,6 +132,7 @@ body {
 .Submenu {
     /* Coloca el submenú independientemente - DJDLA */
     position: absolute;
+
 
     /* Aparece debajo del elemento principal - DJDLA */
     top: 100%;
@@ -159,25 +168,29 @@ body {
 
     /* Hace suaves las animaciones - DJDLA */
     transition: all 0.3s ease;
+
 }
 
 /* Mostrar el submenú - DJDLA */
 /* Cuando el mouse está sobre .Menu-Item, modificamos el .Submenu que está dentro - DJDLA */
-.Menu-Item:Hover .Submenu {
+.Menu-Item:hover .Submenu {
     /* Hace visible el submenú - DJDLA */
     opacity: 1;
+
 
     /* Permite interactuar con el - DJDLA */
     visibility: visible;
 
     /* Regresa a su posición original - DJDLA */
-    transform: translateX(0); 
+    transform: translateY(0);
+
 }
 
 /* Enlaces del submenú - DJDLA */
 .Submenu a {
     /*Cada enlace ocupa una línea completa - DJDLA */
     display: block;
+
 
     /* Espascio interno - DJDLA */
     padding: 13px 18px;
@@ -199,24 +212,28 @@ body {
 
     /* Suaviza el efecto hover - DJDLA */
     transition: all 0.25s ease;
+
 }
 
 /* Efecto en las opciones del submenú - DJDLA */
-.Submenu a:Hover {
+.Submenu a:hover {
     /* Fondo azul muy claro - DJDLA */
     background-color: #eaf2ff;
+
 
     /* Texto azul - DJDLA */
     color: #1455d9;
 
     /* Mueve ligeramente el texto hacia la derecha */
     transform: translateX(5px);
+
 }
 
 /* Botones generales - DJDLA */
 .Boton {
     /* Permite controlar correctamente el padding - DJDLA */
     display: inline-block;
+
 
     /* Espacio interior - DJDLA */
     padding: 12px 26px;
@@ -238,6 +255,7 @@ body {
 
     /* Suaviza las animaciones - DJDLA */
     transition: all 0.3s ease;
+
 }
 
 /* Botón Edubinder - DJDLA */
@@ -249,6 +267,19 @@ body {
     box-shadow: 0 5px 20px rgba(17, 155, 211, 0.50);
 }
 
+/* Efecto al colocar el mouse - DJDLA */
+.Edubinder:hover {
+    /* Azul más claro - DJDLA */
+    background-color: #21afe9;
+
+
+    /* Mueve el botón hacia arriba - DJDLA */
+    transform: translateY(-3px);
+
+    /* Aumenta la sombra - DJDLA */
+    box-shadow: 0 8px 25px rgba(17, 155, 211, 0.50);
+}
+
 /* Botón SI-A.V - DJDLA */
 .Siav {
     /* Fondo verde - DJDLA */
@@ -256,6 +287,21 @@ body {
 
     /* Sombra verde - DJDLA */
     box-shadow: 0 8px 25px rgba(20, 184, 90, 0.50);
+
+}
+
+/* Efecto hover - DJDLA */
+.Siav:hover {
+    /* Verde más claro - DJDLA */
+    background-color: #20ce6b;
+
+
+    /* Mueve el botón - DJDLA */
+    transform: translateY(-3px);
+
+    /* Incrementa la sombra - DJDLA */
+    box-shadow: 0 8px 25px rgba(20, 184, 90, 0.50);
+
 }
 
 /* Contenido de ejemplo - DJDLA */
@@ -266,6 +312,7 @@ body {
 
     /* Centra el contenido - DJDLA */
     text-align: center;
+
 }
 
 /* Titulo - DJDLA */
@@ -273,8 +320,10 @@ body {
     /* Tamaño grande - DJDLA */
     font-size: 45px;
 
+
     /* Espacio debajo - DJDLA */
     margin-bottom: 20px;
+
 }
 
 /* Párrafo - DJDLA */
@@ -282,8 +331,10 @@ body {
     /* Tamaño del texto */
     font-size: 18px;
 
+
     /* Color gris claro - DJDLA */
     color: #cbd5e1;
+
 }
 
 /* Diseño Responsive - DJDLA */
@@ -292,7 +343,6 @@ body {
     .Menu-Principal {
         /* Permite pasar elementos a otra línea - DJDLA */
         flex-wrap: wrap;
-
     }
 }
 
@@ -301,6 +351,7 @@ body {
     .Menu-Principal {
         /* Cambia de horizontal a vertical - DJDLA */
         flex-direction: column;
+
 
         /* Estira los elementos - DJDLA */
         align-items: stretch;
@@ -314,6 +365,7 @@ body {
     .Submenu {
         /* En celular deja de ser flotante - DJDLA */
         position: static;
+
         /* Oculto inicialmente - DJDLA */
         display: none;
 
@@ -329,7 +381,7 @@ body {
     }
 
     /* Al tocar/pasar sobre el elemento, aparece el submenú - DJDLA */
-    .Menu-Item:Hover .Submenu {
+    .Menu-Item:hover .Submenu {
         /* Muestra el submenú - DJDLA */
         display: block;
     }
@@ -338,5 +390,5 @@ body {
         /* Centra el texto de los botones - DJDLA */
         text-align: center;
     }
-}
 
+}
